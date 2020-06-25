@@ -28,7 +28,7 @@ def decompile(apks_list):
 
     for f in apks_list:
         try:
-            # command: apk2java example.apk ./decompiled_apks/ 
+            # command: apk2java example.apk ./decompiled_apks/
             command = "apk2java "+ "'" + f + "' " + "'./decompiled_apks/'"
             os.system(command)
             decompiled_files.append(f)

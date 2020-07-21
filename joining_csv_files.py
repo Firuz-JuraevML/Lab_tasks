@@ -15,18 +15,15 @@ def list_files(path):
 
 
 if __name__ == '__main__':
-    paths = ['1', '2']
-    for path in paths:
-        print ("Folder: " + path)
-        li = []
+    li = []
 
-        all_files = list_files(path)
+    all_files = list_files(path)
 
-        for filename in all_files:
-            filepath = "./" + path + "/" + filename
-            df = pd.read_csv( filepath, index_col=None, header=0)
-            li.append(df)
+    for filename in all_files:
+        filepath = "./" + path + "/" + filename
+        df = pd.read_csv( filepath, index_col=None, header=0)
+        li.append(df)
 
-        frame = pd.concat(li, axis=0, ignore_index=True)
+    frame = pd.concat(li, axis=0, ignore_index=True)
 
-        frame.to_csv("coronovirus.csv")
+    frame.to_csv("coronovirus.csv")

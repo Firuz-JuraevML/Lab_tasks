@@ -17,7 +17,7 @@ def list_files():
 if __name__ == '__main__':
     li = []
 
-    all_files = list_files(path)
+    all_files = list_files()
 
     for filename in all_files:
         filepath = "./" + filename

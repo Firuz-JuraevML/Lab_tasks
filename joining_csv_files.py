@@ -10,7 +10,7 @@ def list_files():
         if f.endswith('.' + "csv"):
             files.append(f)
             counter = counter + 1
-    print ("CSV Files: " + str(counter))
+    print(f"CSV Files: {str(counter)}")
     return files
 
 

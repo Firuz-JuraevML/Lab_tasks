@@ -17,9 +17,8 @@ def parallelize_dataframe(file_list, func, n_cores=15):
                 f.write("%s\n" % i)
 
 def file_to_list(fileName):
-    file = open(fileName, "r")
-    files_list = [str(f).rstrip("\n") for f in file]
-    file.close()
+    with open(fileName, "r") as file:
+        files_list = [str(f).rstrip("\n") for f in file]
     return files_list
 
 

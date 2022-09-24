@@ -17,7 +17,7 @@ def list_files():
             files.append(f)
             counter = counter + 1
 
-    print ("Files: " + str(counter))
+    print(f"Files: {str(counter)}")
     return files
 
 
